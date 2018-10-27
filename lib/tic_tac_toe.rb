@@ -44,4 +44,15 @@ class TicTacToe
     @board[index] = character
   end
   
+  
+  def valid_move?(board, index)
+    return index.between?(0, 8) && !position_taken?(board, index)
+  end
+  
+  def position_taken?(board, index)
+    contents = board[index]
+    return (contents != " ") && (contents != "") && (contents != nil)
+  end
+
+  
 end
