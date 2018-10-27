@@ -125,5 +125,12 @@ class TicTacToe
   end
   
   
-  
+  def winner()
+    winning_positions = won?()
+    if(winning_positions)
+      return @board[winning_positions[0]]
+    else
+      return nil
+    end
+  end
 end
