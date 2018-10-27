@@ -15,6 +15,26 @@ class TicTacToe
   def initialize()
     @board = Array.new(9, " ")
   end
+
+  def display_row(row_number)
+    row_start = 3 * row_number
+    row = [
+      @board[row_start],
+      @board[row_start + 1],
+      @board[row_start + 2]
+    ]
+    puts " #{row[0]} | #{row[1]} | #{row[2]} "
+  end
+
+  def display_board()
+    separator = "-----------"
+    
+    display_row(@board, 0)
+    puts(separator)
+    display_row(@board, 1)
+    puts(separator)
+    display_row(@board, 2)
+  end
   
   def display_board()
     
