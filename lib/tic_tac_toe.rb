@@ -110,17 +110,17 @@ class TicTacToe
     return winning_positions
   end
   
-  def full?(board)
+  def full?()
     (0..8).all? do |index|
-      position_taken?(board, index)
+      position_taken?(index)
     end
   end
   
-  def draw?(board)
-    return full?(board) && !won?(board)
+  def draw?()
+    return full?() && !won?()
   end
   
-  def over?(board)
-    return draw?(board) || won?(board)
+  def over?()
+    return draw?() || won?()
   end
 end
