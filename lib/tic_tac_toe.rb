@@ -135,6 +135,14 @@ class TicTacToe
   end
   
   def play()
-    
+    until over?() do
+      turn()
+    end
+    if won?()
+      symbol = winner()
+      puts "Congratulations #{symbol}!"
+    elsif draw?()
+      puts "Cat's Game!"
+    end
   end
 end
