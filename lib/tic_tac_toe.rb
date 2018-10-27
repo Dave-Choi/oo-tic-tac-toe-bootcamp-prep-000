@@ -36,7 +36,4 @@ class TicTacToe
     display_row(@board, 2)
   end
   
-  def display_board()
-    
-  end
 end
