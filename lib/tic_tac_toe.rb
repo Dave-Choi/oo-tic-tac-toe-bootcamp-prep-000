@@ -29,11 +29,11 @@ class TicTacToe
   def display_board()
     separator = "-----------"
     
-    display_row(@board, 0)
+    display_row(0)
     puts(separator)
-    display_row(@board, 1)
+    display_row(1)
     puts(separator)
-    display_row(@board, 2)
+    display_row(2)
   end
   
 end
