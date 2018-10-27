@@ -87,7 +87,7 @@ class TicTacToe
   end
   
   
-  def won?(board)
+  def won?()
     winning_positions = nil
   
     WIN_COMBINATIONS.each do |combination|
@@ -95,10 +95,10 @@ class TicTacToe
       c2 = combination[1]
       c3 = combination[2]
       
-      if(position_taken?(board, c1))
-        b1 = board[c1]
-        b2 = board[c2]
-        b3 = board[c3]
+      if(position_taken?(c1))
+        b1 = @board[c1]
+        b2 = @board[c2]
+        b3 = @board[c3]
       
         row_symbol = b1
         if row_symbol == b2 && row_symbol == b3
