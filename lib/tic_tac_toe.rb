@@ -53,6 +53,24 @@ class TicTacToe
     contents = @board[index]
     return (contents != " ") && (contents != "") && (contents != nil)
   end
+  
+  def turn_count()
+    count = 0
+    (0..8).each do |index|
+      if(position_taken?(index))
+        count += 1
+      end
+    end
+    
+    return count
+  end
+  
+  def current_player()
+    if(turn_count().even?)
+      return "X"
+    end
+    return "O"
+  end
 
   
 end
